@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogHeader,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { PricingDisplay } from "@/components/PricingDisplay";
