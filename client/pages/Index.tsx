@@ -273,27 +273,15 @@ export default function Index() {
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
+                  whileHover={{ scale: 1.02 }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="text-center p-6 bg-white rounded-2xl shadow-xl border-2 border-blue-200 hover:border-blue-300 hover:shadow-2xl transition-all duration-300"
+                  className="relative text-center p-6 bg-white rounded-2xl shadow-lg border-2 hover:shadow-2xl transition-all duration-500 min-h-[420px] flex flex-col"
+                  style={{ borderColor: '#007BFF' }}
                 >
-                  <div
-                    className={`bg-gradient-to-r ${
-                      benefit.color === "blue"
-                        ? "from-blue-100 to-blue-200"
-                        : benefit.color === "purple"
-                          ? "from-purple-100 to-purple-200"
-                          : benefit.color === "green"
-                            ? "from-green-100 to-green-200"
-                            : benefit.color === "orange"
-                              ? "from-orange-100 to-orange-200"
-                              : benefit.color === "red"
-                                ? "from-red-100 to-red-200"
-                                : "from-indigo-100 to-indigo-200"
-                    } rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4`}
-                  >
+                  {/* Icon at top with white background and shadow */}
+                  <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg border border-gray-100 relative z-10">
                     <benefit.icon
                       className={`h-8 w-8 ${
                         benefit.color === "blue"
@@ -311,22 +299,27 @@ export default function Index() {
                     />
                   </div>
 
-                  {/* Product Image */}
-                  <div className="mb-4 rounded-xl overflow-hidden shadow-md">
+                  {/* Product Image with hover overlay */}
+                  <div className="relative mb-6 rounded-xl overflow-hidden shadow-md group flex-shrink-0">
                     <img
                       src={benefit.image}
                       alt={benefit.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                      className="w-full h-48 object-contain bg-gray-50 transition-all duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
+                    {/* Dark overlay on hover */}
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-500 rounded-xl"></div>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {benefit.desc}
-                  </p>
+                  {/* Text content */}
+                  <div className="flex-grow flex flex-col justify-center">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {benefit.desc}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
