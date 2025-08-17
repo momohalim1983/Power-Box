@@ -23,6 +23,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogHeader,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { PricingDisplay } from "@/components/PricingDisplay";
 import { FloatingSnacks } from "@/components/FloatingSnacks";
@@ -501,7 +502,7 @@ export default function Index() {
 
         {/* Enhanced Product Modal - Fixed 3-Part Layout */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="fixed inset-0 z-[1001] w-screen h-screen sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-none sm:rounded-2xl shadow-2xl p-0 overflow-hidden">
+          <DialogContent className="fixed inset-0 z-[1001] w-screen h-screen sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-none sm:rounded-2xl shadow-2xl p-0 overflow-hidden">
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -516,6 +517,9 @@ export default function Index() {
                     Nutritious Snack Box with Breakfast Bars and Delicious Chips
                     | Gift A Snack (42 Count)
                   </DialogTitle>
+                  <DialogDescription className="text-sm text-gray-600 mt-2">
+                    View detailed product information, pricing, and purchase options for this 42-piece snack collection.
+                  </DialogDescription>
                 </DialogHeader>
 
                 {/* Close Button */}
@@ -532,7 +536,7 @@ export default function Index() {
               <div
                 className="flex-1 overflow-y-auto p-4 sm:p-6"
                 style={{
-                  maxHeight: "calc(100vh - 120px - 80px)", // Account for header and footer
+                  maxHeight: "calc(100vh - 160px - 100px)", // Account for header and footer on mobile
                   WebkitOverflowScrolling: "touch",
                 }}
               >
@@ -638,7 +642,7 @@ export default function Index() {
               </div>
 
               {/* FOOTER - Fixed at bottom */}
-              <div className="flex-shrink-0 bg-white border-t border-gray-200 p-4 sm:p-6">
+              <div className="flex-shrink-0 bg-white border-t border-gray-200 p-4 sm:p-6 sticky bottom-0 z-10">
                 <div className="space-y-3">
                   <Button
                     onClick={() => {
@@ -646,7 +650,7 @@ export default function Index() {
                       handleProceedToWalmart();
                     }}
                     size="lg"
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
                   >
                     Buy Now on Walmart
                     <ShoppingCart className="ml-2 h-5 w-5" />
@@ -656,7 +660,7 @@ export default function Index() {
                     onClick={() => setIsModalOpen(false)}
                     variant="outline"
                     size="lg"
-                    className="w-full py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                    className="w-full py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
                   >
                     Continue Browsing
                   </Button>
