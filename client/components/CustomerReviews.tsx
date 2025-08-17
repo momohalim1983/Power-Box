@@ -103,7 +103,7 @@ export function CustomerReviews() {
               <div
                 key={review.id}
                 className="flex-shrink-0 w-72 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-5 border-2 hover:shadow-2xl transition-all duration-300"
-                style={{ borderColor: '#007BFF' }}
+                style={{ borderColor: "#007BFF" }}
               >
                 {/* Quotation Mark Icon */}
                 <div className="flex justify-center mb-3">
@@ -149,7 +149,7 @@ export function CustomerReviews() {
               <div
                 key={`duplicate-${review.id}`}
                 className="flex-shrink-0 w-72 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-5 border-2 hover:shadow-2xl transition-all duration-300"
-                style={{ borderColor: '#007BFF' }}
+                style={{ borderColor: "#007BFF" }}
               >
                 {/* Quotation Mark Icon */}
                 <div className="flex justify-center mb-3">

@@ -8,7 +8,10 @@ interface ExitIntentPopupProps {
   onClaimOffer: (email?: string) => void;
 }
 
-export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps) {
+export function ExitIntentPopup({
+  onClose,
+  onClaimOffer,
+}: ExitIntentPopupProps) {
   const [email, setEmail] = useState("");
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes countdown
   const [isEmailValid, setIsEmailValid] = useState(false);
@@ -31,7 +34,7 @@ export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps)
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, "0")}`;
   };
 
   const handleClaimOffer = () => {
@@ -79,11 +82,11 @@ export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps)
                 WAIT! Don't Miss Out
               </span>
             </div>
-            
+
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-2">
               Get 10% OFF + FREE Shipping!
             </h2>
-            
+
             <p className="text-red-100 text-center text-sm">
               Exclusive offer expires soon!
             </p>
@@ -108,16 +111,20 @@ export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps)
                   Save $3.20 + FREE Shipping
                 </div>
                 <div className="text-sm text-green-600">
-                  ✓ 10% discount on your order<br />
-                  ✓ Free shipping (normally $5.99)<br />
-                  ✓ Same premium quality snacks
+                  ✓ 10% discount on your order
+                  <br />
+                  ✓ Free shipping (normally $5.99)
+                  <br />✓ Same premium quality snacks
                 </div>
               </div>
             </div>
 
             {/* Email Input */}
             <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Enter your email to claim this offer:
               </label>
               <div className="relative">
@@ -132,7 +139,9 @@ export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps)
                 />
               </div>
               {email && !isEmailValid && (
-                <p className="text-red-500 text-xs mt-1">Please enter a valid email address</p>
+                <p className="text-red-500 text-xs mt-1">
+                  Please enter a valid email address
+                </p>
               )}
             </div>
 
@@ -146,7 +155,7 @@ export function ExitIntentPopup({ onClose, onClaimOffer }: ExitIntentPopupProps)
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Get My Discount Now
               </Button>
-              
+
               <button
                 onClick={onClose}
                 className="w-full text-gray-500 hover:text-gray-700 text-sm font-medium py-2 transition-colors"

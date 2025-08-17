@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface UseExitIntentOptions {
   enabled?: boolean;
@@ -16,7 +16,7 @@ export function useExitIntent({
   const [hasTriggered, setHasTriggered] = useState(false);
 
   useEffect(() => {
-    if (!enabled || hasTriggered || typeof window === 'undefined') {
+    if (!enabled || hasTriggered || typeof window === "undefined") {
       return;
     }
 
@@ -28,7 +28,7 @@ export function useExitIntent({
         if (timeoutId) {
           clearTimeout(timeoutId);
         }
-        
+
         timeoutId = setTimeout(() => {
           if (!hasTriggered) {
             setHasTriggered(true);
@@ -57,15 +57,17 @@ export function useExitIntent({
     };
 
     // Add event listeners
-    document.addEventListener('mouseleave', handleMouseLeave);
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    document.addEventListener("touchstart", handleTouchStart, {
+      passive: true,
+    });
 
     // Cleanup
     return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      document.removeEventListener("touchstart", handleTouchStart);
       if (timeoutId) {
         clearTimeout(timeoutId);
       }

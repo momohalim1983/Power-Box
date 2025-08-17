@@ -76,7 +76,7 @@ export default function Index() {
   };
 
   const handleClaimOffer = (email?: string) => {
-    console.log('Exit intent offer claimed', { email });
+    console.log("Exit intent offer claimed", { email });
     // Here you could track the email signup and apply discount
     setShowExitIntent(false);
     // Optionally redirect to purchase with discount applied
@@ -262,42 +262,48 @@ export default function Index() {
                   title: "Variety of Snacks",
                   desc: "Perfect mix of breakfast bars and savory snacks for any time of day",
                   color: "blue",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F4d9abe9f679440fcb3470285697707f4?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F4d9abe9f679440fcb3470285697707f4?format=webp&width=800",
                 },
                 {
                   icon: Gift,
                   title: "High-End Packaging",
                   desc: "Attractive and professional packaging that makes a great impression",
                   color: "purple",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F6305c43f8b6449fc8926c50b002e25fe?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F6305c43f8b6449fc8926c50b002e25fe?format=webp&width=800",
                 },
                 {
                   icon: Zap,
                   title: "Grab-and-Go Convenience",
                   desc: "Individually packaged snacks perfect for busy lifestyles",
                   color: "green",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F26b950db7e9644baa7113c5a0046d0fa?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F26b950db7e9644baa7113c5a0046d0fa?format=webp&width=800",
                 },
                 {
                   icon: Users,
                   title: "Suitable for All Ages",
                   desc: "Perfect for adults, teens, and college students alike",
                   color: "orange",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2Fa7c068e933744309b8f41ed0726156a2?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2Fa7c068e933744309b8f41ed0726156a2?format=webp&width=800",
                 },
                 {
                   icon: Heart,
                   title: "Heartwarming Greeting Card",
                   desc: "Comes with a special greeting card to show you care",
                   color: "red",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F19d8d6717d2a4dc6b633c9494573527a?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F19d8d6717d2a4dc6b633c9494573527a?format=webp&width=800",
                 },
                 {
                   icon: BadgeCheck,
                   title: "42 Count Value",
                   desc: "Generous quantity ensuring lasting satisfaction and value",
                   color: "indigo",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F74bff8b15ba640b1acf1428f6b9b71b9?format=webp&width=800",
+                  image:
+                    "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F74bff8b15ba640b1acf1428f6b9b71b9?format=webp&width=800",
                 },
               ].map((benefit, index) => (
                 <motion.div
@@ -307,7 +313,7 @@ export default function Index() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="relative bg-white rounded-2xl shadow-lg border-2 hover:shadow-2xl transition-all duration-500 overflow-hidden"
-                  style={{ borderColor: '#007BFF' }}
+                  style={{ borderColor: "#007BFF" }}
                 >
                   {/* Product Image - Full height of upper portion */}
                   <div className="relative h-64 group overflow-hidden">
@@ -586,13 +592,15 @@ export default function Index() {
                       "Free 90-day returns",
                       "Arrives by Thu, Aug 21",
                       "Beautiful gift packaging",
-                      "Greeting card included"
+                      "Greeting card included",
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="bg-green-100 rounded-full p-1 flex-shrink-0">
                           <Check className="h-4 w-4 text-green-600" />
                         </div>
-                        <span className="text-gray-700 font-medium">{benefit}</span>
+                        <span className="text-gray-700 font-medium">
+                          {benefit}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -684,8 +692,12 @@ export default function Index() {
                 className="text-gray-400 hover:text-white transform hover:scale-110 transition-all duration-300"
                 aria-label="Follow us on TikTok"
               >
-                <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-.1z"/>
+                <svg
+                  className="h-8 w-8"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-.1z" />
                 </svg>
               </a>
             </div>
@@ -701,170 +713,171 @@ export default function Index() {
                 <X className="h-6 w-6" />
                 <span className="sr-only">Close</span>
               </DialogPrimitive.Close>
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="h-full flex flex-col"
-            >
-              {/* HEADER - Fixed at top */}
-              <div className="relative flex-shrink-0 bg-white border-b border-gray-200 p-4 sm:p-6">
-                <DialogHeader>
-                  <DialogTitle className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight pr-12">
-                    Nutritious Snack Box with Breakfast Bars and Delicious Chips
-                    | Gift A Snack (42 Count)
-                  </DialogTitle>
-                  <DialogDescription className="text-sm text-gray-600 mt-2">
-                    View detailed product information, pricing, and purchase options for this 42-piece snack collection.
-                  </DialogDescription>
-                </DialogHeader>
-
-                {/* Close Button */}
-                <button
-                  onClick={() => setIsModalOpen(false)}
-                  className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 shadow-sm"
-                  aria-label="Close modal"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-
-              {/* BODY - Scrollable content */}
-              <div
-                className="flex-1 overflow-y-auto p-4 sm:p-6"
-                style={{
-                  maxHeight: "calc(100vh - 140px - 120px)", // Account for header and footer on mobile
-                  WebkitOverflowScrolling: "touch",
-                }}
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.95, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="h-full flex flex-col"
               >
-                {/* Product Image */}
-                <div className="relative mb-6">
-                  <div className="relative overflow-hidden rounded-xl shadow-lg bg-gray-50">
-                    <img
-                      src={productImages[currentImageIndex]}
-                      alt="Nutritious Snack Box - Gift A Snack"
-                      className="w-full h-48 sm:h-64 object-contain"
-                      loading="lazy"
-                    />
-                  </div>
+                {/* HEADER - Fixed at top */}
+                <div className="relative flex-shrink-0 bg-white border-b border-gray-200 p-4 sm:p-6">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight pr-12">
+                      Nutritious Snack Box with Breakfast Bars and Delicious
+                      Chips | Gift A Snack (42 Count)
+                    </DialogTitle>
+                    <DialogDescription className="text-sm text-gray-600 mt-2">
+                      View detailed product information, pricing, and purchase
+                      options for this 42-piece snack collection.
+                    </DialogDescription>
+                  </DialogHeader>
 
-                  {productImages.length > 1 && (
-                    <>
-                      <button
-                        onClick={prevImage}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md hover:bg-white touch-manipulation"
-                        aria-label="Previous image"
-                      >
-                        <ChevronLeft className="h-4 w-4" />
-                      </button>
-                      <button
-                        onClick={nextImage}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md hover:bg-white touch-manipulation"
-                      >
-                        <ChevronRight className="h-4 w-4" />
-                      </button>
-                    </>
-                  )}
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center mb-4">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-4 w-4 ${i < 4 || (i === 4 && i < 4.6) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
-                      />
-                    ))}
-                  </div>
-                  <span className="ml-2 text-sm text-gray-600 font-medium">
-                    4.6 ⭐ (23 reviews)
-                  </span>
-                </div>
-
-                {/* Pricing Section */}
-                <div className="mb-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
-                  <PricingDisplay
-                    salePrice={salePrice}
-                    size="lg"
-                    className="mb-2"
-                  />
-                  <div className="text-sm text-green-600 font-medium">
-                    ✓ Subscribe & Save available
-                  </div>
-                  <div className="text-sm text-blue-600 font-medium">
-                    ✓ Walmart+ offer eligible
-                  </div>
-                </div>
-
-                {/* Pieces Count */}
-                <div className="mb-4 p-4 bg-gray-50 rounded-xl">
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-gray-900 text-base">
-                      Pieces Count:
-                    </span>
-                    <span className="text-lg font-bold text-blue-600">
-                      42 Items
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    Perfect variety for extended enjoyment
-                  </p>
-                </div>
-
-                {/* More Details Section - Always Visible */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    More Details
-                  </h3>
-                  <div className="space-y-2">
-                    {[
-                      "Ultimate snack experience in a beautifully designed high-end packaging box",
-                      "Packed with a variety of breakfast bars and savory snacks for daily energy",
-                      "Individually packaged snacks for convenient grab-and-go options",
-                      "Ideal for adults, teens, and college students alike",
-                      "Arrives with a heartwarming greeting card for a personal touch",
-                    ].map((detail, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="bg-green-100 rounded-full p-1 mt-0.5 flex-shrink-0">
-                          <Check className="h-3 w-3 text-green-600" />
-                        </div>
-                        <p className="text-gray-700 leading-relaxed text-sm">
-                          {detail}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* FOOTER - Fixed at bottom */}
-              <div className="flex-shrink-0 bg-white border-t border-gray-200 p-4 sm:p-6 sticky bottom-0 z-10">
-                <div className="space-y-3">
-                  <Button
-                    onClick={() => {
-                      setIsModalOpen(false);
-                      handleProceedToWalmart();
-                    }}
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
-                  >
-                    Buy Now on Walmart
-                    <ShoppingCart className="ml-2 h-5 w-5" />
-                  </Button>
-
-                  <Button
+                  {/* Close Button */}
+                  <button
                     onClick={() => setIsModalOpen(false)}
-                    variant="outline"
-                    size="lg"
-                    className="w-full py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 shadow-sm"
+                    aria-label="Close modal"
                   >
-                    Continue Browsing
-                  </Button>
+                    <X className="h-6 w-6" />
+                  </button>
                 </div>
-              </div>
-            </motion.div>
+
+                {/* BODY - Scrollable content */}
+                <div
+                  className="flex-1 overflow-y-auto p-4 sm:p-6"
+                  style={{
+                    maxHeight: "calc(100vh - 140px - 120px)", // Account for header and footer on mobile
+                    WebkitOverflowScrolling: "touch",
+                  }}
+                >
+                  {/* Product Image */}
+                  <div className="relative mb-6">
+                    <div className="relative overflow-hidden rounded-xl shadow-lg bg-gray-50">
+                      <img
+                        src={productImages[currentImageIndex]}
+                        alt="Nutritious Snack Box - Gift A Snack"
+                        className="w-full h-48 sm:h-64 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {productImages.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md hover:bg-white touch-manipulation"
+                          aria-label="Previous image"
+                        >
+                          <ChevronLeft className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md hover:bg-white touch-manipulation"
+                        >
+                          <ChevronRight className="h-4 w-4" />
+                        </button>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center mb-4">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-4 w-4 ${i < 4 || (i === 4 && i < 4.6) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                        />
+                      ))}
+                    </div>
+                    <span className="ml-2 text-sm text-gray-600 font-medium">
+                      4.6 ⭐ (23 reviews)
+                    </span>
+                  </div>
+
+                  {/* Pricing Section */}
+                  <div className="mb-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                    <PricingDisplay
+                      salePrice={salePrice}
+                      size="lg"
+                      className="mb-2"
+                    />
+                    <div className="text-sm text-green-600 font-medium">
+                      ✓ Subscribe & Save available
+                    </div>
+                    <div className="text-sm text-blue-600 font-medium">
+                      ✓ Walmart+ offer eligible
+                    </div>
+                  </div>
+
+                  {/* Pieces Count */}
+                  <div className="mb-4 p-4 bg-gray-50 rounded-xl">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-gray-900 text-base">
+                        Pieces Count:
+                      </span>
+                      <span className="text-lg font-bold text-blue-600">
+                        42 Items
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Perfect variety for extended enjoyment
+                    </p>
+                  </div>
+
+                  {/* More Details Section - Always Visible */}
+                  <div className="mb-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      More Details
+                    </h3>
+                    <div className="space-y-2">
+                      {[
+                        "Ultimate snack experience in a beautifully designed high-end packaging box",
+                        "Packed with a variety of breakfast bars and savory snacks for daily energy",
+                        "Individually packaged snacks for convenient grab-and-go options",
+                        "Ideal for adults, teens, and college students alike",
+                        "Arrives with a heartwarming greeting card for a personal touch",
+                      ].map((detail, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="bg-green-100 rounded-full p-1 mt-0.5 flex-shrink-0">
+                            <Check className="h-3 w-3 text-green-600" />
+                          </div>
+                          <p className="text-gray-700 leading-relaxed text-sm">
+                            {detail}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* FOOTER - Fixed at bottom */}
+                <div className="flex-shrink-0 bg-white border-t border-gray-200 p-4 sm:p-6 sticky bottom-0 z-10">
+                  <div className="space-y-3">
+                    <Button
+                      onClick={() => {
+                        setIsModalOpen(false);
+                        handleProceedToWalmart();
+                      }}
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                    >
+                      Buy Now on Walmart
+                      <ShoppingCart className="ml-2 h-5 w-5" />
+                    </Button>
+
+                    <Button
+                      onClick={() => setIsModalOpen(false)}
+                      variant="outline"
+                      size="lg"
+                      className="w-full py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                    >
+                      Continue Browsing
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
             </DialogPrimitive.Content>
           </DialogPortal>
         </Dialog>
