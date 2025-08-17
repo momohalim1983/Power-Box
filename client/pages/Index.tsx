@@ -24,7 +24,10 @@ import {
   DialogTitle,
   DialogHeader,
   DialogDescription,
+  DialogPortal,
+  DialogOverlay,
 } from "@/components/ui/dialog";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { PricingDisplay } from "@/components/PricingDisplay";
 import { FloatingSnacks } from "@/components/FloatingSnacks";
 import { StickyCTA } from "@/components/StickyCTA";
