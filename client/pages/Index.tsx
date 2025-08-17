@@ -871,6 +871,14 @@ export default function Index() {
 
         {/* Sticky CTA for Mobile */}
         <StickyCTA onClick={handleCardClick} />
+
+        {/* Exit Intent Popup */}
+        {showExitIntent && (
+          <ExitIntentPopup
+            onClose={handleCloseExitIntent}
+            onClaimOffer={handleClaimOffer}
+          />
+        )}
       </div>
 
       {/* Enhanced Structured Data */}
