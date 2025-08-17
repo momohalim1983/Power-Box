@@ -545,7 +545,7 @@ export default function Index() {
               <div
                 className="flex-1 overflow-y-auto p-4 sm:p-6"
                 style={{
-                  maxHeight: "calc(100vh - 160px - 100px)", // Account for header and footer on mobile
+                  maxHeight: "calc(100vh - 140px - 120px)", // Account for header and footer on mobile
                   WebkitOverflowScrolling: "touch",
                 }}
               >
