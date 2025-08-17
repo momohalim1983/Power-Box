@@ -36,6 +36,8 @@ import { PricingDisplay } from "@/components/PricingDisplay";
 import { FloatingSnacks } from "@/components/FloatingSnacks";
 import { StickyCTA } from "@/components/StickyCTA";
 import { CustomerReviews } from "@/components/CustomerReviews";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { useExitIntent } from "@/hooks/use-exit-intent";
 
 export default function Index() {
   const [isModalOpen, setIsModalOpen] = useState(false);
