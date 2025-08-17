@@ -473,43 +473,129 @@ export default function Index() {
 
         {/* Final CTA Section */}
         <motion.section
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative z-10 py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 px-4 sm:px-6 lg:px-8"
+          className="relative z-10 py-16 sm:py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 sm:px-6 lg:px-8"
         >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to Fuel Your Day with Nutritious Snacks?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of satisfied customers who choose Gift A Snack for
-              quality and convenience
-            </p>
+          <div className="max-w-6xl mx-auto">
+            {/* Header Section */}
+            <div className="text-center mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-4"
+              >
+                <span>🔥</span>
+                <span>Bestseller - Limited Time Offer</span>
+              </motion.div>
 
-            {/* Final Pricing Reminder */}
-            <div className="bg-white/20 backdrop-blur rounded-2xl p-6 mb-8 inline-block">
-              <PricingDisplay
-                salePrice={salePrice}
-                size="lg"
-                className="[&>div:first-child>span:first-child]:text-white/70 [&>div:first-child>span:last-child]:text-white [&>div:last-child]:text-white/80"
-              />
-              <div className="text-blue-100 mt-3">
-                <div>✓ Subscribe & Save available</div>
-                <div>✓ Free 90-day returns</div>
-                <div>✓ Arrives by Thu, Aug 21</div>
-              </div>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight"
+              >
+                Ready to Fuel Your Day?
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto"
+              >
+                Get your 42-count nutritious snack box today!
+              </motion.p>
             </div>
 
-            <Button
-              onClick={handleCardClick}
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-50 px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
-            >
-              View Product Details
-              <ShoppingCart className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" />
-            </Button>
+            {/* Main Content Grid */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Product Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="text-center lg:text-left"
+              >
+                <img
+                  src={productImages[0]}
+                  alt="Nutritious Snack Box"
+                  className="w-full max-w-md mx-auto lg:mx-0 rounded-2xl shadow-2xl"
+                  loading="lazy"
+                />
+              </motion.div>
+
+              {/* Pricing and CTA */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className="text-center lg:text-left"
+              >
+                {/* Enhanced Pricing Card */}
+                <div className="bg-white rounded-3xl shadow-2xl border-2 border-blue-200 p-8 mb-8 hover:shadow-3xl transition-all duration-300">
+                  {/* Price at Top */}
+                  <div className="text-center mb-6">
+                    <PricingDisplay
+                      salePrice={salePrice}
+                      size="lg"
+                      className="[&>div:first-child>span:last-child]:text-4xl sm:[&>div:first-child>span:last-child]:text-5xl [&>div:first-child>span:last-child]:font-bold [&>div:first-child>span:last-child]:text-green-600"
+                    />
+                    <p className="text-red-600 font-semibold text-lg mt-2">
+                      You save 26% - Limited time!
+                    </p>
+                  </div>
+
+                  {/* Benefits with Checkmarks */}
+                  <div className="space-y-3">
+                    {[
+                      "42 premium snacks included",
+                      "Subscribe & Save available",
+                      "Free 90-day returns",
+                      "Arrives by Thu, Aug 21",
+                      "Beautiful gift packaging",
+                      "Greeting card included"
+                    ].map((benefit, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="bg-green-100 rounded-full p-1 flex-shrink-0">
+                          <Check className="h-4 w-4 text-green-600" />
+                        </div>
+                        <span className="text-gray-700 font-medium">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Enhanced CTA Button */}
+                <Button
+                  onClick={handleCardClick}
+                  size="lg"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 touch-manipulation mb-6"
+                >
+                  Get Your Snack Box Now
+                  <ShoppingCart className="ml-3 h-6 w-6" />
+                </Button>
+
+                {/* Trust Bar */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-green-600" />
+                    <span className="font-medium">Secure Payment</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Truck className="h-5 w-5 text-blue-600" />
+                    <span className="font-medium">Fast Shipping</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <BadgeCheck className="h-5 w-5 text-purple-600" />
+                    <span className="font-medium">Satisfaction Guaranteed</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </motion.section>
 
