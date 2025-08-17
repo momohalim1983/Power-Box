@@ -277,42 +277,42 @@ export default function Index() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="relative text-center p-6 bg-white rounded-2xl shadow-lg border-2 hover:shadow-2xl transition-all duration-500 min-h-[420px] flex flex-col"
+                  className="relative bg-white rounded-2xl shadow-lg border-2 hover:shadow-2xl transition-all duration-500 overflow-hidden"
                   style={{ borderColor: '#007BFF' }}
                 >
-                  {/* Icon at top with white background and shadow */}
-                  <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-lg border border-gray-100 relative z-10">
-                    <benefit.icon
-                      className={`h-8 w-8 ${
-                        benefit.color === "blue"
-                          ? "text-blue-600"
-                          : benefit.color === "purple"
-                            ? "text-purple-600"
-                            : benefit.color === "green"
-                              ? "text-green-600"
-                              : benefit.color === "orange"
-                                ? "text-orange-600"
-                                : benefit.color === "red"
-                                  ? "text-red-600"
-                                  : "text-indigo-600"
-                      }`}
-                    />
-                  </div>
-
-                  {/* Product Image with hover overlay */}
-                  <div className="relative mb-6 rounded-xl overflow-hidden shadow-md group flex-shrink-0">
+                  {/* Product Image - Full height of upper portion */}
+                  <div className="relative h-64 group overflow-hidden">
                     <img
                       src={benefit.image}
                       alt={benefit.title}
-                      className="w-full h-48 object-contain bg-gray-50 transition-all duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
                       loading="lazy"
                     />
                     {/* Dark overlay on hover */}
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-500 rounded-xl"></div>
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition-all duration-500"></div>
+
+                    {/* Icon positioned in top-right corner on image */}
+                    <div className="absolute top-4 right-4 bg-white bg-opacity-90 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10">
+                      <benefit.icon
+                        className={`h-6 w-6 ${
+                          benefit.color === "blue"
+                            ? "text-blue-600"
+                            : benefit.color === "purple"
+                              ? "text-purple-600"
+                              : benefit.color === "green"
+                                ? "text-green-600"
+                                : benefit.color === "orange"
+                                  ? "text-orange-600"
+                                  : benefit.color === "red"
+                                    ? "text-red-600"
+                                    : "text-indigo-600"
+                        }`}
+                      />
+                    </div>
                   </div>
 
-                  {/* Text content */}
-                  <div className="flex-grow flex flex-col justify-center">
+                  {/* Text content at bottom */}
+                  <div className="p-6 text-center">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
                       {benefit.title}
                     </h3>
