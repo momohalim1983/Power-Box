@@ -233,36 +233,42 @@ export default function Index() {
                   title: "Variety of Snacks",
                   desc: "Perfect mix of breakfast bars and savory snacks for any time of day",
                   color: "blue",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F4d9abe9f679440fcb3470285697707f4?format=webp&width=800",
                 },
                 {
                   icon: Gift,
                   title: "High-End Packaging",
                   desc: "Attractive and professional packaging that makes a great impression",
                   color: "purple",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F6305c43f8b6449fc8926c50b002e25fe?format=webp&width=800",
                 },
                 {
                   icon: Zap,
                   title: "Grab-and-Go Convenience",
                   desc: "Individually packaged snacks perfect for busy lifestyles",
                   color: "green",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F26b950db7e9644baa7113c5a0046d0fa?format=webp&width=800",
                 },
                 {
                   icon: Users,
                   title: "Suitable for All Ages",
                   desc: "Perfect for adults, teens, and college students alike",
                   color: "orange",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2Fa7c068e933744309b8f41ed0726156a2?format=webp&width=800",
                 },
                 {
                   icon: Heart,
                   title: "Heartwarming Greeting Card",
                   desc: "Comes with a special greeting card to show you care",
                   color: "red",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F19d8d6717d2a4dc6b633c9494573527a?format=webp&width=800",
                 },
                 {
                   icon: BadgeCheck,
                   title: "42 Count Value",
                   desc: "Generous quantity ensuring lasting satisfaction and value",
                   color: "indigo",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F79b7dfd5cb0f4ca0b96e836c27c6ef40%2F74bff8b15ba640b1acf1428f6b9b71b9?format=webp&width=800",
                 },
               ].map((benefit, index) => (
                 <motion.div
@@ -271,7 +277,7 @@ export default function Index() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="text-center p-6 bg-white rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
+                  className="text-center p-6 bg-white rounded-2xl shadow-xl border-2 border-blue-200 hover:border-blue-300 hover:shadow-2xl transition-all duration-300"
                 >
                   <div
                     className={`bg-gradient-to-r ${
@@ -304,6 +310,17 @@ export default function Index() {
                       }`}
                     />
                   </div>
+
+                  {/* Product Image */}
+                  <div className="mb-4 rounded-xl overflow-hidden shadow-md">
+                    <img
+                      src={benefit.image}
+                      alt={benefit.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
