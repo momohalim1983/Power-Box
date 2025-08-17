@@ -505,7 +505,9 @@ export default function Index() {
 
         {/* Enhanced Product Modal - Fixed 3-Part Layout */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-          <DialogContent className="fixed inset-0 z-[1001] w-screen h-screen sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-none sm:rounded-2xl shadow-2xl p-0 overflow-hidden">
+          <DialogPortal>
+            <DialogOverlay />
+            <DialogPrimitive.Content className="fixed inset-0 z-[1001] w-screen h-screen sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-none sm:rounded-2xl shadow-2xl p-0 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 duration-200">
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -670,7 +672,8 @@ export default function Index() {
                 </div>
               </div>
             </motion.div>
-          </DialogContent>
+            </DialogPrimitive.Content>
+          </DialogPortal>
         </Dialog>
 
         {/* Sticky CTA for Mobile */}
