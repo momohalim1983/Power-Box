@@ -194,9 +194,18 @@ export function CustomerReviews() {
 
         {/* Trust Indicator */}
         <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
-            ⭐ Based on verified customer reviews
-          </p>
+          <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2">
+            <div className="flex gap-1">
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+            </div>
+            <span className="text-sm font-medium text-gray-700">
+              Based on verified customer reviews
+            </span>
+          </div>
         </div>
       </div>
     </section>
