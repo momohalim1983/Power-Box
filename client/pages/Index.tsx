@@ -61,6 +61,28 @@ export default function Index() {
     handleProceedToWalmart();
   };
 
+  // Exit intent detection
+  useExitIntent({
+    enabled: !showExitIntent && !isModalOpen, // Only show if not already shown and modal is closed
+    sensitivity: 20,
+    delayInMs: 100,
+    onExitIntent: () => {
+      setShowExitIntent(true);
+    },
+  });
+
+  const handleCloseExitIntent = () => {
+    setShowExitIntent(false);
+  };
+
+  const handleClaimOffer = (email?: string) => {
+    console.log('Exit intent offer claimed', { email });
+    // Here you could track the email signup and apply discount
+    setShowExitIntent(false);
+    // Optionally redirect to purchase with discount applied
+    handleProceedToWalmart();
+  };
+
   const handleProceedToWalmart = () => {
     // Actually redirect to Walmart
     console.log("Proceeding to Walmart checkout");
