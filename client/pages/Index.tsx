@@ -16,6 +16,10 @@ import {
   Heart,
   BadgeCheck,
   Truck,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
