@@ -177,7 +177,7 @@ export default function Index() {
                         ✓ Subscribe & Save available
                       </span>
                       <span className="text-xs sm:text-sm text-blue-600 font-medium">
-                        ✓ Walmart+ offer eligible
+                        ��� Walmart+ offer eligible
                       </span>
                     </div>
                   </div>
@@ -782,22 +782,22 @@ export default function Index() {
                   </div>
 
                   {/* Rating */}
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center sm:justify-start mb-4">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className={`h-4 w-4 ${i < 4 || (i === 4 && i < 4.6) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                          className={`h-4 w-4 sm:h-4 sm:w-4 ${i < 4 || (i === 4 && i < 4.6) ? "text-yellow-400 fill-current" : "text-gray-300"}`}
                         />
                       ))}
                     </div>
-                    <span className="ml-2 text-sm text-gray-600 font-medium">
+                    <span className="ml-2 text-sm sm:text-sm text-gray-700 font-medium">
                       4.6 ⭐ (23 reviews)
                     </span>
                   </div>
 
                   {/* Pricing Section */}
-                  <div className="mb-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                  <div className="mb-4 p-3 sm:p-4 bg-blue-50 rounded-xl border border-blue-200">
                     <PricingDisplay
                       salePrice={salePrice}
                       size="lg"
