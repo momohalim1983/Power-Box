@@ -23,7 +23,7 @@ export function ExitIntentPopup({
 
   const handleSubscribe = () => {
     if (email.trim() && isEmailValid) {
-      onClaimOffer(email);
+      onSubscribe(email);
     }
   };
 
