@@ -888,7 +888,7 @@ export default function Index() {
         {showExitIntent && (
           <ExitIntentPopup
             onClose={handleCloseExitIntent}
-            onClaimOffer={handleClaimOffer}
+            onSubscribe={handleSubscribe}
           />
         )}
       </div>
