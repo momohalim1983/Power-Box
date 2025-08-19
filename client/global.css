@@ -177,4 +177,37 @@
   .button-glow-animation:hover::before {
     opacity: 1;
   }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-pulse-glow {
+      animation: none;
+    }
+
+    .animate-spin-slow {
+      animation: none;
+    }
+
+    .button-glow-animation {
+      transition: none;
+    }
+
+    .button-glow-animation:hover {
+      transform: none;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .button-glow-animation:hover {
+      box-shadow:
+        0 0 15px rgba(255, 215, 0, 0.2),
+        0 0 30px rgba(255, 165, 0, 0.1);
+    }
+
+    .animate-pulse-glow {
+      animation-duration: 4s; /* Slower on mobile to reduce battery drain */
+    }
+  }
 }
