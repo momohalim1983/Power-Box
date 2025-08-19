@@ -745,19 +745,19 @@ export default function Index() {
 
                 {/* BODY - Scrollable content */}
                 <div
-                  className="flex-1 overflow-y-auto p-4 sm:p-6"
+                  className="flex-1 overflow-y-auto px-3 py-4 sm:p-6"
                   style={{
-                    maxHeight: "calc(100vh - 140px - 120px)", // Account for header and footer on mobile
+                    maxHeight: "calc(100vh - 180px - 140px)", // Account for header and footer on mobile
                     WebkitOverflowScrolling: "touch",
                   }}
                 >
                   {/* Product Image */}
-                  <div className="relative mb-6">
-                    <div className="relative overflow-hidden rounded-xl shadow-lg bg-gray-50">
+                  <div className="relative mb-4 sm:mb-6">
+                    <div className="relative overflow-hidden rounded-xl shadow-lg bg-gray-50 mx-auto max-w-[280px] sm:max-w-none">
                       <img
                         src={productImages[currentImageIndex]}
                         alt="Nutritious Snack Box - Gift A Snack"
-                        className="w-full h-48 sm:h-64 object-contain"
+                        className="w-full h-40 sm:h-64 object-contain"
                         loading="lazy"
                       />
                     </div>
