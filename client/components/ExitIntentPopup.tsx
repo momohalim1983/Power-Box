@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 interface ExitIntentPopupProps {
   onClose: () => void;
-  onClaimOffer: (email?: string) => void;
+  onSubscribe: (email?: string) => void;
 }
 
 export function ExitIntentPopup({
