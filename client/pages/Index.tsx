@@ -853,15 +853,15 @@ export default function Index() {
                 </div>
 
                 {/* FOOTER - Fixed at bottom */}
-                <div className="flex-shrink-0 bg-white border-t border-gray-200 p-4 sm:p-6 sticky bottom-0 z-10">
-                  <div className="space-y-3">
+                <div className="flex-shrink-0 bg-white border-t border-gray-200 p-3 sm:p-6 sticky bottom-0 z-10 shadow-lg sm:shadow-none">
+                  <div className="space-y-2 sm:space-y-3">
                     <Button
                       onClick={() => {
                         setIsModalOpen(false);
                         handleProceedToWalmart();
                       }}
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-4 text-base sm:text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 touch-manipulation"
                     >
                       Buy Now on Walmart
                       <ShoppingCart className="ml-2 h-5 w-5" />
@@ -871,7 +871,7 @@ export default function Index() {
                       onClick={() => setIsModalOpen(false)}
                       variant="outline"
                       size="lg"
-                      className="w-full py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
+                      className="w-full py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-xl touch-manipulation border-2"
                     >
                       Continue Browsing
                     </Button>
