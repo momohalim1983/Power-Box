@@ -10,7 +10,7 @@ interface ExitIntentPopupProps {
 
 export function ExitIntentPopup({
   onClose,
-  onClaimOffer,
+  onSubscribe,
 }: ExitIntentPopupProps) {
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
