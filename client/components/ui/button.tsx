@@ -42,16 +42,19 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({
-    className,
-    variant,
-    size,
-    asChild = false,
-    showSparkIcon = true,
-    sparkPosition = "left",
-    children,
-    ...props
-  }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      showSparkIcon = true,
+      sparkPosition = "left",
+      children,
+      ...props
+    },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : "button";
 
     return (
@@ -59,7 +62,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           buttonVariants({ variant, size }),
           "button-glow-animation",
-          className
+          className,
         )}
         ref={ref}
         {...props}
@@ -77,9 +80,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             />
           )}
 
-          <span className="flex items-center gap-2">
-            {children}
-          </span>
+          <span className="flex items-center gap-2">{children}</span>
 
           {showSparkIcon && sparkPosition === "right" && (
             <img

@@ -838,7 +838,10 @@ export default function Index() {
                         "Ideal for adults, teens, and college students alike",
                         "Arrives with a heartwarming greeting card for a personal touch",
                       ].map((detail, index) => (
-                        <div key={index} className="flex items-start gap-2 sm:gap-3">
+                        <div
+                          key={index}
+                          className="flex items-start gap-2 sm:gap-3"
+                        >
                           <div className="bg-green-100 rounded-full p-1 mt-0.5 flex-shrink-0">
                             <Check className="h-3 w-3 text-green-600" />
                           </div>

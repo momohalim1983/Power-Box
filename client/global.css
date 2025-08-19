@@ -132,7 +132,8 @@
 @layer utilities {
   /* Pulse glow animation */
   @keyframes pulse-glow {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0;
     }
     50% {
@@ -160,11 +161,12 @@
 
   /* Enhanced button hover effects */
   .button-glow-animation::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(45deg,
+    background: linear-gradient(
+      45deg,
       rgba(255, 215, 0, 0.1),
       rgba(255, 165, 0, 0.1),
       rgba(255, 215, 0, 0.1)

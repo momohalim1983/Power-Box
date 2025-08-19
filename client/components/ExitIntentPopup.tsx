@@ -66,7 +66,8 @@ export function ExitIntentPopup({
             </div>
 
             <h2 className="text-xl md:text-2xl font-bold text-center mb-2 leading-tight">
-              👉 Subscribe now to be the first to know about our upcoming exclusive offers
+              👉 Subscribe now to be the first to know about our upcoming
+              exclusive offers
             </h2>
           </div>
 
@@ -75,7 +76,8 @@ export function ExitIntentPopup({
             {/* Subtext */}
             <div className="text-center mb-6">
               <p className="text-gray-600 text-base leading-relaxed">
-                👉 Join our mailing list and get the latest news and special deals before anyone else.
+                👉 Join our mailing list and get the latest news and special
+                deals before anyone else.
               </p>
             </div>
 
@@ -122,7 +124,8 @@ export function ExitIntentPopup({
             <div className="mt-6 pt-4 border-t border-gray-100">
               <div className="text-center">
                 <p className="text-xs text-gray-500">
-                  👉 🔒 We will never send you spam. You can unsubscribe anytime.
+                  👉 🔒 We will never send you spam. You can unsubscribe
+                  anytime.
                 </p>
               </div>
             </div>
