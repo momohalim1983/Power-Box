@@ -75,12 +75,11 @@ export default function Index() {
     setShowExitIntent(false);
   };
 
-  const handleClaimOffer = (email?: string) => {
-    console.log("Exit intent offer claimed", { email });
-    // Here you could track the email signup and apply discount
+  const handleSubscribe = (email?: string) => {
+    console.log("Newsletter subscription", { email });
+    // Here you could track the email signup
     setShowExitIntent(false);
-    // Optionally redirect to purchase with discount applied
-    handleProceedToWalmart();
+    // You could show a thank you message or redirect
   };
 
   const handleProceedToWalmart = () => {
