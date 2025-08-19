@@ -708,7 +708,7 @@ export default function Index() {
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
           <DialogPortal>
             <DialogOverlay />
-            <DialogPrimitive.Content className="fixed inset-0 z-[1001] w-screen h-screen sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-none sm:rounded-2xl shadow-2xl p-0 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 duration-200">
+            <DialogPrimitive.Content className="fixed inset-4 z-[1001] mx-auto my-auto w-auto h-auto max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] sm:inset-auto sm:left-1/2 sm:top-1/2 sm:w-full sm:max-w-[640px] sm:h-[90vh] sm:max-h-[800px] sm:translate-x-[-50%] sm:translate-y-[-50%] bg-white border-0 rounded-2xl sm:rounded-2xl shadow-2xl p-0 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 duration-200">
               <DialogPrimitive.Close className="absolute right-4 top-4 z-50 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors shadow-sm sm:hidden">
                 <X className="h-6 w-6" />
                 <span className="sr-only">Close</span>
