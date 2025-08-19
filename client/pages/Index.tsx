@@ -721,22 +721,22 @@ export default function Index() {
                 className="h-full flex flex-col"
               >
                 {/* HEADER - Fixed at top */}
-                <div className="relative flex-shrink-0 bg-white border-b border-gray-200 p-4 sm:p-6">
+                <div className="relative flex-shrink-0 bg-white border-b border-gray-200 p-3 sm:p-6">
                   <DialogHeader>
-                    <DialogTitle className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight pr-12">
+                    <DialogTitle className="text-lg sm:text-2xl font-bold text-gray-900 leading-tight pr-10 sm:pr-12">
                       Nutritious Snack Box with Breakfast Bars and Delicious
                       Chips | Gift A Snack (42 Count)
                     </DialogTitle>
-                    <DialogDescription className="text-sm text-gray-600 mt-2">
+                    <DialogDescription className="text-sm sm:text-sm text-gray-600 mt-2 pr-8 sm:pr-0">
                       View detailed product information, pricing, and purchase
                       options for this 42-piece snack collection.
                     </DialogDescription>
                   </DialogHeader>
 
-                  {/* Close Button */}
+                  {/* Close Button - Desktop only */}
                   <button
                     onClick={() => setIsModalOpen(false)}
-                    className="absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 shadow-sm"
+                    className="hidden sm:block absolute top-4 right-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10 shadow-sm"
                     aria-label="Close modal"
                   >
                     <X className="h-6 w-6" />
