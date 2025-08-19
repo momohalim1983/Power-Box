@@ -177,7 +177,7 @@ export default function Index() {
                         ✓ Subscribe & Save available
                       </span>
                       <span className="text-xs sm:text-sm text-blue-600 font-medium">
-                        ��� Walmart+ offer eligible
+                        ✓ Walmart+ offer eligible
                       </span>
                     </div>
                   </div>
@@ -812,23 +812,23 @@ export default function Index() {
                   </div>
 
                   {/* Pieces Count */}
-                  <div className="mb-4 p-4 bg-gray-50 rounded-xl">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-gray-900 text-base">
+                  <div className="mb-4 p-3 sm:p-4 bg-gray-50 rounded-xl">
+                    <div className="flex items-center justify-center sm:justify-start gap-2">
+                      <span className="font-semibold text-gray-900 text-sm sm:text-base">
                         Pieces Count:
                       </span>
                       <span className="text-lg font-bold text-blue-600">
                         42 Items
                       </span>
                     </div>
-                    <p className="text-sm text-gray-600 mt-1">
+                    <p className="text-sm text-gray-600 mt-1 text-center sm:text-left">
                       Perfect variety for extended enjoyment
                     </p>
                   </div>
 
                   {/* More Details Section - Always Visible */}
-                  <div className="mb-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  <div className="mb-4 sm:mb-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 text-center sm:text-left">
                       More Details
                     </h3>
                     <div className="space-y-2">
@@ -839,7 +839,7 @@ export default function Index() {
                         "Ideal for adults, teens, and college students alike",
                         "Arrives with a heartwarming greeting card for a personal touch",
                       ].map((detail, index) => (
-                        <div key={index} className="flex items-start gap-3">
+                        <div key={index} className="flex items-start gap-2 sm:gap-3">
                           <div className="bg-green-100 rounded-full p-1 mt-0.5 flex-shrink-0">
                             <Check className="h-3 w-3 text-green-600" />
                           </div>
