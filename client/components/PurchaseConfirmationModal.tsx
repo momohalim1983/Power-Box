@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogHeader,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { PricingDisplay } from "@/components/PricingDisplay";
@@ -49,6 +50,10 @@ export function PurchaseConfirmationModal({
 
           <DialogHeader>
             <DialogTitle className="sr-only">Purchase Confirmation</DialogTitle>
+            <DialogDescription className="sr-only">
+              Complete your purchase with exclusive benefits and secure checkout
+              through Walmart.
+            </DialogDescription>
           </DialogHeader>
 
           {/* Urgency Timer */}

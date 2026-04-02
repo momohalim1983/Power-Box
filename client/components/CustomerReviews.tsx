@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 interface CustomerReview {
   id: number;
@@ -88,12 +88,12 @@ export function CustomerReviews() {
 
           {/* Scrolling Animation */}
           <motion.div
-            className="flex gap-6 w-max"
+            className="flex gap-4 w-max"
             animate={{
-              x: [0, -1800], // Adjust based on card width and gap
+              x: [0, -1500], // Adjusted for smaller card width
             }}
             transition={{
-              duration: 30,
+              duration: 35,
               repeat: Infinity,
               ease: "linear",
             }}
@@ -102,36 +102,44 @@ export function CustomerReviews() {
             {customerReviews.map((review) => (
               <div
                 key={review.id}
-                className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
+                className="flex-shrink-0 w-72 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-5 border-2 hover:shadow-2xl transition-all duration-300"
+                style={{ borderColor: "#007BFF" }}
               >
+                {/* Quotation Mark Icon */}
+                <div className="flex justify-center mb-3">
+                  <div className="bg-blue-100 rounded-full p-2">
+                    <Quote className="h-5 w-5 text-blue-600" />
+                  </div>
+                </div>
+
                 {/* Customer Photo */}
                 <div className="flex justify-center mb-4">
                   <img
                     src={review.photo}
                     alt={review.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-gray-100"
+                    className="w-14 h-14 rounded-full object-cover border-3 border-white shadow-md"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Customer Name and Rating */}
                 <div className="text-center mb-4">
-                  <h3 className="font-semibold text-gray-900 text-lg mb-2">
+                  <h3 className="font-semibold text-gray-900 text-base mb-2">
                     {review.name}
                   </h3>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center gap-1">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-5 w-5 text-yellow-400 fill-current"
+                        className="h-4 w-4 text-yellow-500 fill-current drop-shadow-sm"
                       />
                     ))}
                   </div>
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600 text-center leading-relaxed">
-                  "{review.review}"
+                <p className="text-gray-700 text-center leading-relaxed text-sm font-medium">
+                  {review.review}
                 </p>
               </div>
             ))}
@@ -140,36 +148,44 @@ export function CustomerReviews() {
             {customerReviews.map((review) => (
               <div
                 key={`duplicate-${review.id}`}
-                className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
+                className="flex-shrink-0 w-72 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-5 border-2 hover:shadow-2xl transition-all duration-300"
+                style={{ borderColor: "#007BFF" }}
               >
+                {/* Quotation Mark Icon */}
+                <div className="flex justify-center mb-3">
+                  <div className="bg-blue-100 rounded-full p-2">
+                    <Quote className="h-5 w-5 text-blue-600" />
+                  </div>
+                </div>
+
                 {/* Customer Photo */}
                 <div className="flex justify-center mb-4">
                   <img
                     src={review.photo}
                     alt={review.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-gray-100"
+                    className="w-14 h-14 rounded-full object-cover border-3 border-white shadow-md"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Customer Name and Rating */}
                 <div className="text-center mb-4">
-                  <h3 className="font-semibold text-gray-900 text-lg mb-2">
+                  <h3 className="font-semibold text-gray-900 text-base mb-2">
                     {review.name}
                   </h3>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center gap-1">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="h-5 w-5 text-yellow-400 fill-current"
+                        className="h-4 w-4 text-yellow-500 fill-current drop-shadow-sm"
                       />
                     ))}
                   </div>
                 </div>
 
                 {/* Review Text */}
-                <p className="text-gray-600 text-center leading-relaxed">
-                  "{review.review}"
+                <p className="text-gray-700 text-center leading-relaxed text-sm font-medium">
+                  {review.review}
                 </p>
               </div>
             ))}
@@ -178,9 +194,18 @@ export function CustomerReviews() {
 
         {/* Trust Indicator */}
         <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
-            ⭐ Based on verified customer reviews
-          </p>
+          <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2">
+            <div className="flex gap-1">
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+            </div>
+            <span className="text-sm font-medium text-gray-700">
+              Based on verified customer reviews
+            </span>
+          </div>
         </div>
       </div>
     </section>
